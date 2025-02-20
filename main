@@ -1,1 +1,40 @@
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+local hwidik = "51948352-cdf4-4cb5-aae1-a5d78e1e8bff"
+if hwidik==HWID then
+local Mobile = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UICorner = Instance.new("UICorner")
 
+--Properties:
+
+Mobile.Name = "Mobile"
+Mobile.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Mobile.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextButton.Parent = Mobile
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 85, 0)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.00910194218, 0, 0.456551731, 0)
+TextButton.Size = UDim2.new(0.0618932024, 0, 0.162939295, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "scam"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 18.000
+
+UIAspectRatioConstraint.Parent = TextButton
+
+UICorner.CornerRadius = UDim.new(0, 25)
+UICorner.Parent = TextButton
+Mobile.TextButton.TouchTap:Connect(function()
+	local i=0
+		while true do
+			i+=1
+		end
+end)
+else
+	setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+	wait(1)
+	game.Players.LocalPlayer:Kick("HWID не найден, напиши van1chh в дискорде")
+end
